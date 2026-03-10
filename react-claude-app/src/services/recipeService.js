@@ -2,7 +2,7 @@ export async function getRecipeFromAI(ingredients) {
 
     try {
 
-        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        const response = await fetch("/openai/v1/responses", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -10,10 +10,7 @@ export async function getRecipeFromAI(ingredients) {
             },
             body: JSON.stringify({
                 model: "gpt-4o-mini",
-                messages: [
-                    {
-                        role: "user",
-                        content: `
+                input: `
 You are Chef Claude, a friendly cooking assistant.
 
 Create a concise recipe using the following ingredients:
@@ -28,9 +25,6 @@ Guidelines:
 ### Ingredients
 ### Instructions
 `
-                    }
-                ],
-                max_tokens: 300
             })
         })
 
@@ -38,7 +32,7 @@ Guidelines:
 
         console.log("AI response:", data)
 
-        return data.choices[0].message.content
+        return data.output[0].content[0].text
 
     } catch (error) {
 
