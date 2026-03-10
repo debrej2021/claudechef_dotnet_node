@@ -2,7 +2,7 @@ export async function getRecipeFromAI(ingredients) {
 
     try {
 
-        const response = await fetch("/openai/v1/responses", {
+        const response = await fetch("https://api.openai.com/v1/responses", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
