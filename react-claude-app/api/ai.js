@@ -1,11 +1,14 @@
 export default async function handler(req, res) {
-    //debugger
 
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" })
   }
 
   const { ingredients } = req.body
+
+  if (!ingredients || ingredients.length === 0) {
+    return res.status(400).json({ error: "No ingredients provided" })
+  }
 
   const prompt = `
 You are Chef Claude, a friendly cooking assistant.
@@ -26,6 +29,9 @@ Format using markdown:
 
   try {
 
+    console.log("Starting orchestration")
+    console.log("Ingredients:", ingredients)
+
     const gptCall = fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -34,12 +40,7 @@ Format using markdown:
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "user",
-            content: prompt
-          }
-        ],
+        messages: [{ role: "user", content: prompt }],
         max_tokens: 300
       })
     })
@@ -54,47 +55,43 @@ Format using markdown:
       body: JSON.stringify({
         model: "claude-3-haiku-20240307",
         max_tokens: 300,
-        messages: [
-          {
-            role: "user",
-            content: prompt
-          }
-        ]
+        messages: [{ role: "user", content: prompt }]
       })
     })
 
-    const [gptRes, claudeRes] = await Promise.allSettled([
-      gptCall,
-      claudeCall
-    ])
+    const [gptRes, claudeRes] = await Promise.allSettled([gptCall, claudeCall])
 
-    let responses = []
+    const responses = []
 
     if (gptRes.status === "fulfilled") {
       const data = await gptRes.value.json()
-      responses.push({
-        model: "gpt",
-        text: data.choices?.[0]?.message?.content
-      })
+      const text = data?.choices?.[0]?.message?.content
+
+      console.log("GPT returned:", text?.slice(0, 50))
+
+      if (text) {
+        responses.push({ model: "gpt", text })
+      }
     }
 
     if (claudeRes.status === "fulfilled") {
       const data = await claudeRes.value.json()
-      responses.push({
-        model: "claude",
-        text: data.content?.[0]?.text
-      })
+      const text = data?.content?.[0]?.text
+
+      console.log("Claude returned:", text?.slice(0, 50))
+
+      if (text) {
+        responses.push({ model: "claude", text })
+      }
     }
 
-    res.status(200).json({
-      answers: responses
-    })
+    return res.status(200).json({ answers: responses })
 
   } catch (error) {
 
-    console.error(error)
+    console.error("Orchestration error:", error)
 
-    res.status(500).json({
+    return res.status(500).json({
       error: "AI orchestration failed"
     })
   }
