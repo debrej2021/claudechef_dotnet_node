@@ -1,0 +1,202 @@
+2026-03-18 14:46:37.402 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: OPENAI
+2026-03-18 14:46:37.432 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 14:46:37.433 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 14:46:37.441 +00:00 [DBG] Hosting starting
+2026-03-18 14:46:37.567 +00:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-18 14:46:37.578 +00:00 [FTL] Application terminated unexpectedly
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server/Program.cs:line 77
+2026-03-18 14:47:02.248 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: OPENAI
+2026-03-18 14:47:02.272 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 14:47:02.272 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 14:47:02.277 +00:00 [DBG] Hosting starting
+2026-03-18 14:47:02.338 +00:00 [INF] Now listening on: http://localhost:5000
+2026-03-18 14:47:02.338 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-18 14:47:02.338 +00:00 [INF] Hosting environment: Development
+2026-03-18 14:47:02.338 +00:00 [INF] Content root path: /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server
+2026-03-18 14:47:02.338 +00:00 [DBG] Hosting started
+2026-03-18 14:47:06.105 +00:00 [INF] API | GET /health | 200 | 24ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"status":"ok","environment":"Development","timestamp":"2026-03-18T14:47:06.0863178Z"}
+2026-03-18 14:47:06.132 +00:00 [INF] API | GET /api/ai/health | 200 | 9ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"currentProvider":"openai","isConfigured":false,"availableProviders":["openai","claude"],"openAiConfigured":false,"claudeConfigured":false,"status":"not configured"}}
+2026-03-18 14:47:06.181 +00:00 [INF] API | POST /api/ai | 400 | 29ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":false,"error":"Please provide at least 2 ingredients."}
+2026-03-18 14:47:13.486 +00:00 [INF] Application is shutting down...
+2026-03-18 14:47:13.487 +00:00 [DBG] Hosting stopping
+2026-03-18 14:47:13.495 +00:00 [DBG] Hosting stopped
+2026-03-18 14:52:53.157 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: OPENAI
+2026-03-18 14:52:53.210 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 14:52:53.211 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 14:52:53.222 +00:00 [DBG] Hosting starting
+2026-03-18 14:52:53.360 +00:00 [INF] Now listening on: http://localhost:5000
+2026-03-18 14:52:53.360 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-18 14:52:53.361 +00:00 [INF] Hosting environment: Development
+2026-03-18 14:52:53.362 +00:00 [INF] Content root path: /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server
+2026-03-18 14:52:53.362 +00:00 [DBG] Hosting started
+2026-03-18 14:52:55.039 +00:00 [INF] Generating recipe for 3 ingredients: chicken, garlic, tomato
+2026-03-18 14:52:55.044 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 14:52:55.045 +00:00 [INF] [Orchestrator] Attempting OPENAI...
+2026-03-18 14:52:55.048 +00:00 [WRN] [Orchestrator] OPENAI failed: OpenAI API key is not configured. Please set OPENAI_API_KEY.
+2026-03-18 14:52:55.048 +00:00 [INF] [Orchestrator] Falling back to CLAUDE...
+2026-03-18 14:52:55.050 +00:00 [WRN] [Orchestrator] CLAUDE failed: Claude API key is not configured. Please set CLAUDE_API_KEY.
+2026-03-18 14:52:55.050 +00:00 [INF] [Orchestrator] Using RAG fallback generator...
+2026-03-18 14:52:55.067 +00:00 [INF] API | POST /api/ai | 200 | 82ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"answers":[{"model":"fallback-rag","text":"# Chicken and garlic Bake\n\n### Ingredients\n- chicken\n- garlic\n- tomato\n- Olive oil or cooking oil\n- Salt and pepper to taste\n- Optional: herbs (basil, oregano, thyme) or spices\n\n### Instructions\n1. Preheat oven to 375°F (190°C)\n2. Prepare a baking dish with oil or butter\n3. Arrange ingredients in the dish\n4. Season with salt, pepper, and herbs\n5. Bake for 25-30 minutes until golden and cooked through\n6. Let rest for 5 minutes before serving\n\n**Chef's Tip:** This recipe was created using your available ingredients. Feel free to adjust seasonings and cooking times to your preference.\n\n**Note:** Recipe generated using our backup system. For more detailed AI-powered recipes, please try again when our AI services are available."}]},"meta":{"provider":"fallback","tokensUsed":0,"ingredientsCount":3,"fallbackUsed":true,"originalProvider":"openai","timestamp":"2026-03-18T14:52:55.0541830Z"},"error":null}
+2026-03-18 14:53:02.897 +00:00 [INF] Application is shutting down...
+2026-03-18 14:53:02.898 +00:00 [DBG] Hosting stopping
+2026-03-18 14:53:02.911 +00:00 [DBG] Hosting stopped
+2026-03-18 15:00:06.529 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: OPENAI
+2026-03-18 15:00:06.553 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 15:00:06.553 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 15:00:06.557 +00:00 [DBG] Hosting starting
+2026-03-18 15:00:06.633 +00:00 [INF] Now listening on: http://localhost:5000
+2026-03-18 15:00:06.633 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-18 15:00:06.634 +00:00 [INF] Hosting environment: Development
+2026-03-18 15:00:06.634 +00:00 [INF] Content root path: /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server
+2026-03-18 15:00:06.634 +00:00 [DBG] Hosting started
+2026-03-18 15:00:10.590 +00:00 [INF] Generating recipe for 3 ingredients: chicken, garlic, tomato
+2026-03-18 15:00:10.594 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 15:00:10.594 +00:00 [INF] [Orchestrator] Attempting OPENAI...
+2026-03-18 15:00:10.596 +00:00 [INF] [OpenAI] Making request with 30s timeout...
+2026-03-18 15:00:10.611 +00:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2026-03-18 15:00:10.612 +00:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2026-03-18 15:00:18.103 +00:00 [INF] Received HTTP response headers after 7489.3338ms - 200
+2026-03-18 15:00:18.104 +00:00 [INF] End processing HTTP request after 7495.0525ms - 200
+2026-03-18 15:00:18.107 +00:00 [INF] [OpenAI] Recipe validated: 1127 chars, 350 tokens
+2026-03-18 15:00:18.108 +00:00 [INF] [Orchestrator] OPENAI succeeded
+2026-03-18 15:00:18.122 +00:00 [INF] API | POST /api/ai | 200 | 7576ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"answers":[{"model":"gpt-4o-mini","text":"### Ingredients\n- 2 chicken breasts\n- 3 cloves garlic, minced\n- 2 medium tomatoes, diced\n- Optional: olive oil, salt, pepper, herbs (basil or oregano)\n\n### Instructions\n1. **Prepare the Chicken**: If using, drizzle olive oil over the chicken breasts and season with salt and pepper.\n2. **Sear the Chicken**: In a skillet over medium heat, add the chicken breasts. Cook for 5-7 minutes on each side until golden brown and cooked through. Remove from the skillet and set aside.\n3. **Sauté Garlic**: In the same skillet, add minced garlic. Sauté for about 30 seconds until fragrant.\n4. **Add Tomatoes**: Stir in the diced tomatoes and cook for 3-4 minutes, allowing them to soften and release their juices.\n5. **Combine**: Return the chicken to the skillet, nestling it into the tomato mixture.\n6. **Simmer**: Cover the skillet and let it simmer for an additional 5 minutes to allow flavors to meld.\n7. **Optional Herbs**: If using, sprinkle fresh herbs over the top before serving.\n8. **Serve**: Plate the chicken and spoon the tomato-garlic sauce over it.\n9. **Enjoy**: Serve warm and enjoy your delicious garlic tomato chicken!"}]},"meta":{"provider":"openai","tokensUsed":350,"ingredientsCount":3,"fallbackUsed":false,"originalProvider":"","timestamp":"2026-03-18T15:00:18.1088881Z"},"error":null}
+2026-03-18 15:00:45.504 +00:00 [INF] Application is shutting down...
+2026-03-18 15:00:45.505 +00:00 [DBG] Hosting stopping
+2026-03-18 15:00:45.513 +00:00 [DBG] Hosting stopped
+2026-03-18 15:03:17.205 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: OPENAI
+2026-03-18 15:03:17.225 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 15:03:17.226 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 15:03:17.231 +00:00 [DBG] Hosting starting
+2026-03-18 15:03:17.296 +00:00 [INF] Now listening on: http://localhost:5000
+2026-03-18 15:03:17.296 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-18 15:03:17.296 +00:00 [INF] Hosting environment: Development
+2026-03-18 15:03:17.296 +00:00 [INF] Content root path: /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server
+2026-03-18 15:03:17.296 +00:00 [DBG] Hosting started
+2026-03-18 15:03:28.692 +00:00 [INF] API | GET /health | 200 | 22ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"status":"ok","environment":"Development","timestamp":"2026-03-18T15:03:28.6722742Z"}
+2026-03-18 15:03:50.307 +00:00 [INF] Generating recipe for 3 ingredients: chicken, garlic, fish
+2026-03-18 15:03:50.309 +00:00 [INF] Fallback chain: openai → claude → RAG
+2026-03-18 15:03:50.309 +00:00 [INF] [Orchestrator] Attempting OPENAI...
+2026-03-18 15:03:50.312 +00:00 [INF] [OpenAI] Making request with 30s timeout...
+2026-03-18 15:03:50.342 +00:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2026-03-18 15:03:50.344 +00:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2026-03-18 15:03:56.629 +00:00 [INF] Received HTTP response headers after 5693.1939ms - 200
+2026-03-18 15:03:56.630 +00:00 [INF] End processing HTTP request after 5703.4846ms - 200
+2026-03-18 15:03:56.634 +00:00 [INF] [OpenAI] Recipe validated: 1164 chars, 360 tokens
+2026-03-18 15:03:56.635 +00:00 [INF] [Orchestrator] OPENAI succeeded
+2026-03-18 15:03:56.651 +00:00 [INF] API | POST /api/ai | 200 | 5813ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"answers":[{"model":"gpt-4o-mini","text":"### Ingredients\n- 2 chicken breasts\n- 3 cloves garlic, minced\n- 1 fillet of fish (such as tilapia or cod)\n- Optional: olive oil, salt, pepper, herbs (like thyme or parsley)\n\n### Instructions\n1. **Prep Chicken**: Lightly season the chicken breasts with salt, pepper, and optional herbs if desired.\n2. **Sear Chicken**: In a skillet over medium heat, add a drizzle of olive oil (optional) and sear the chicken breasts for about 5-6 minutes on each side until golden brown. Remove and set aside.\n3. **Sauté Garlic**: In the same skillet, add the minced garlic and sauté for about 1 minute until fragrant.\n4. **Add Fish**: Place the fish fillet in the skillet with the garlic, cooking for about 3-4 minutes on each side until fully cooked and flaky.\n5. **Combine**: Return the chicken to the skillet with the fish and garlic. Cook everything together for an additional 2-3 minutes, allowing the flavors to meld.\n6. **Serve**: Plate the chicken and fish together, spooning any garlic from the skillet over the top.\n7. **Garnish (Optional)**: Sprinkle with fresh herbs for extra flavor if desired.\n8. **Enjoy**: Serve warm and enjoy your flavorful chicken and fish dish!"}]},"meta":{"provider":"openai","tokensUsed":360,"ingredientsCount":3,"fallbackUsed":false,"originalProvider":"","timestamp":"2026-03-18T15:03:56.6362683Z"},"error":null}
+2026-03-18 15:05:53.073 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client ''
+2026-03-18 15:06:03.082 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:06:03.085 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.031ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:06:13.086 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:06:13.086 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0034ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:06:23.558 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:06:23.559 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0074ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:06:33.560 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:06:33.560 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0049ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:06:43.564 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:06:43.565 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0055ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:06:53.258 +00:00 [INF] Application is shutting down...
+2026-03-18 15:06:53.260 +00:00 [DBG] Hosting stopping
+2026-03-18 15:06:53.270 +00:00 [DBG] Hosting stopped
+2026-03-18 15:07:04.926 +00:00 [INF] Claude Chef .NET 10 Backend | Port: 5000 | Provider: CLAUDE
+2026-03-18 15:07:04.948 +00:00 [INF] Fallback chain: claude → openai → RAG
+2026-03-18 15:07:04.948 +00:00 [INF] Log file: /home/deba/claudechef_dotnet_node/react-claude-app/logs/api.log
+2026-03-18 15:07:04.953 +00:00 [DBG] Hosting starting
+2026-03-18 15:07:05.015 +00:00 [INF] Now listening on: http://localhost:5000
+2026-03-18 15:07:05.015 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-18 15:07:05.015 +00:00 [INF] Hosting environment: Development
+2026-03-18 15:07:05.015 +00:00 [INF] Content root path: /home/deba/claudechef_dotnet_node/react-claude-app/dotnet-server
+2026-03-18 15:07:05.015 +00:00 [DBG] Hosting started
+2026-03-18 15:08:10.473 +00:00 [INF] Generating recipe for 3 ingredients: chicken, fish, garlic
+2026-03-18 15:08:10.477 +00:00 [INF] Fallback chain: claude → openai → RAG
+2026-03-18 15:08:10.477 +00:00 [INF] [Orchestrator] Attempting CLAUDE...
+2026-03-18 15:08:10.480 +00:00 [INF] [Claude] Making request with 30s timeout...
+2026-03-18 15:08:10.495 +00:00 [INF] Start processing HTTP request POST https://api.anthropic.com/v1/messages
+2026-03-18 15:08:10.498 +00:00 [INF] Sending HTTP request POST https://api.anthropic.com/v1/messages
+2026-03-18 15:08:19.427 +00:00 [INF] Received HTTP response headers after 8927.0185ms - 200
+2026-03-18 15:08:19.429 +00:00 [INF] End processing HTTP request after 8936.4603ms - 200
+2026-03-18 15:08:19.437 +00:00 [INF] [Claude] Recipe validated: 1227 chars, 452 tokens
+2026-03-18 15:08:19.438 +00:00 [INF] [Orchestrator] CLAUDE succeeded
+2026-03-18 15:08:19.466 +00:00 [INF] API | POST /api/ai | 200 | 9043ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"answers":[{"model":"claude-sonnet-4-6","text":"# Garlic Chicken & Fish Skillet\n\nA simple, flavorful one-pan dish where garlic ties both proteins together beautifully.\n\n### Ingredients\n\n**Main:**\n- 2 chicken thighs (boneless)\n- 2 fish fillets (white fish like tilapia or cod works great)\n- 6 cloves garlic, minced\n\n**Optional:**\n- Olive oil\n- Salt & pepper\n- Fresh parsley\n- Lemon juice\n- Butter\n\n---\n\n### Instructions\n\n1. **Season** both the chicken and fish generously with salt, pepper, and half the minced garlic.\n2. Heat a skillet over medium-high heat with a drizzle of olive oil *(or cook dry if preferred)*.\n3. **Sear the chicken** for 5–6 minutes per side until golden and cooked through. Remove and set aside.\n4. Lower heat to medium and **add the remaining garlic** to the pan, stirring for 30 seconds until fragrant.\n5. **Add the fish fillets** to the same pan, cooking 3–4 minutes per side, basting with the garlicky pan juices.\n6. Return the chicken to the pan and let everything rest together for 1–2 minutes.\n7. *(Optional)* Finish with a squeeze of lemon juice and a pat of butter for a light pan sauce.\n8. Garnish with fresh parsley and serve immediately.\n\n> \uD83D\uDCA1 **Chef's Tip:** Cook the chicken first so its juices flavor the pan — your fish will thank you!"}]},"meta":{"provider":"claude","tokensUsed":452,"ingredientsCount":3,"fallbackUsed":false,"originalProvider":"","timestamp":"2026-03-18T15:08:19.4399317Z"},"error":null}
+2026-03-18 15:08:31.767 +00:00 [INF] Generating recipe for 3 ingredients: chicken, fish, garlic
+2026-03-18 15:08:31.767 +00:00 [INF] Fallback chain: claude → openai → RAG
+2026-03-18 15:08:31.767 +00:00 [INF] [Orchestrator] Attempting CLAUDE...
+2026-03-18 15:08:31.767 +00:00 [INF] [Claude] Making request with 30s timeout...
+2026-03-18 15:08:31.768 +00:00 [INF] Start processing HTTP request POST https://api.anthropic.com/v1/messages
+2026-03-18 15:08:31.768 +00:00 [INF] Sending HTTP request POST https://api.anthropic.com/v1/messages
+2026-03-18 15:08:39.136 +00:00 [INF] Received HTTP response headers after 6682.2106ms - 200
+2026-03-18 15:08:39.136 +00:00 [INF] End processing HTTP request after 6683.0154ms - 200
+2026-03-18 15:08:39.136 +00:00 [INF] [Claude] Recipe validated: 1186 chars, 449 tokens
+2026-03-18 15:08:39.136 +00:00 [INF] [Orchestrator] CLAUDE succeeded
+2026-03-18 15:08:39.137 +00:00 [INF] API | POST /api/ai | 200 | 6685ms | Headers: {"Content-Type":"application/json; charset=utf-8"} | Body: {"success":true,"data":{"answers":[{"model":"claude-sonnet-4-6","text":"# Garlic Chicken & Fish Skillet\n\nA simple one-pan dish where garlic brings everything together!\n\n### Ingredients\n\n**Core:**\n- 2 chicken thighs (boneless)\n- 2 fish fillets (tilapia, cod, or similar)\n- 4–5 garlic cloves, minced\n\n**Optional:**\n- Olive oil or butter\n- Salt & pepper\n- Fresh lemon juice\n- Fresh herbs (parsley or thyme)\n- Chili flakes\n\n---\n\n### Instructions\n\n1. **Season** the chicken and fish with salt, pepper, and half the minced garlic. Let sit for 10 minutes.\n2. **Heat** a skillet over medium-high heat with a drizzle of oil or butter *(optional but recommended)*.\n3. **Sear the chicken** for 5–6 minutes per side until golden and cooked through. Remove and set aside.\n4. **Lower the heat** to medium and add the remaining garlic to the same pan, stirring for 30 seconds until fragrant.\n5. **Cook the fish** fillets for 2–3 minutes per side, basting with the garlicky pan juices.\n6. **Return the chicken** to the pan and let everything rest together for 1–2 minutes.\n7. **Finish** with a squeeze of lemon juice and fresh herbs *(optional)* and serve immediately.\n\n> \uD83D\uDC68‍\uD83C\uDF73 **Chef's Tip:** Add the fish last — it cooks much faster than chicken and stays tender that way!"}]},"meta":{"provider":"claude","tokensUsed":449,"ingredientsCount":3,"fallbackUsed":false,"originalProvider":"","timestamp":"2026-03-18T15:08:39.1368064Z"},"error":null}
+2026-03-18 15:10:12.708 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client ''
+2026-03-18 15:10:23.291 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:10:23.293 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0196ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:10:33.298 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:10:33.298 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0038ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:10:43.302 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:10:43.304 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0112ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:10:53.872 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:10:53.874 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.2124ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:11:03.880 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:11:03.881 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0101ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:11:13.882 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:11:13.882 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0057ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:11:24.662 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:11:24.663 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0052ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:11:34.664 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:11:34.664 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0054ms - processed: 0 items - remaining: 1 items
+2026-03-18 15:11:44.666 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2026-03-18 15:11:44.667 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0051ms - processed: 0 items - remaining: 1 items
