@@ -5,10 +5,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/openai": {
-        target: "https://api.openai.com",
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/openai/, "")
+      "/api": {
+        target: "http://localhost:3001",
+        changeOrigin: true
       }
     }
   }
